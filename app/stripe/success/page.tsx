@@ -1,7 +1,15 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useShoppingCart } from 'use-shopping-cart';
 
 const SuccessPage = () => {
+  const { clearCart } = useShoppingCart();
+
+  // Clear the cart when the page loads
+  useEffect(() => {
+    clearCart();
+  }, [clearCart]);
   return (
     <section className='py-72'>
       <div className='container mx-auto'>
