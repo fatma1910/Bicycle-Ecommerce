@@ -1,11 +1,6 @@
-'use client'
 import Link from 'next/link'
-import React, { useEffect } from 'react'
-import { useShoppingCart } from 'use-shopping-cart';
 
 const SuccessPage = () => {
-
-  
   return (
     <section className='py-72'>
       <div className='container mx-auto'>
