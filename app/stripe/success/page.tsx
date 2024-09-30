@@ -1,14 +1,7 @@
-import Link from 'next/link'
-import { useEffect } from 'react';
-import { useShoppingCart } from 'use-shopping-cart';
-const SuccessPage = () => {
-  const { clearCart } = useShoppingCart();
 
-  useEffect(() => {
-    if (clearCart) {
-      clearCart(); // Call clearCart only if it is defined
-    }
-  }, [clearCart]);
+import Link from 'next/link'
+
+const SuccessPage = () => {
   return (
     <section className='py-72'>
       <div className='container mx-auto'>
