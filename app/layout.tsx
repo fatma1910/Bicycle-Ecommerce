@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import {Rajdhani} from "next/font/google"
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import CartProvider from "./components/CartProvider";
+import { Toaster } from "./components/ui/toaster";
+
+const rajdhani = Rajdhani({ subsets: ['latin'], weight:['300', "400" , "500", "600" , "700" ],
+  variable: "--font-rajdhani"
+ });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +25,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={rajdhani.variable}
       >
+        <CartProvider>
+
+        <Header/>
         {children}
+        <Toaster/>
+        <Footer />
+      </CartProvider>
       </body>
     </html>
   );

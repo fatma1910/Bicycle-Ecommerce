@@ -1,27 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply box-border;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body {
+    @apply font-rajdhani;
   }
+
+  h1,h2,h3,h4,h5,h6 {
+    @apply font-bold uppercase;
+  }
+  h1 {
+    @apply text-5xl md:text-[80px] leading-none;
+  }
+  h2 {
+    @apply text-[40px];
+  }
+  h3 {
+    @apply text-[22px];
+  }
+  h4 {
+    @apply text-[18px];
+  }
+  a {
+    @apply font-bold uppercase leading-none hover:text-accent transition-all duration-200;
+  }
+
+  .btn {
+    @apply flex justify-center items-center h-[50px] px-8 rounded-md text-white font-semibold uppercase ;
+  }
+  .btn-icon {
+    @apply flex justify-center items-center h-[50px] w-[50px] text-2xl text-white;
+  }
+  .btn-accent {
+    @apply bg-accent hover:bg-accent-hover transition-all;
+  }
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover transition-all;
+  }
+  .btn-white {
+    @apply bg-white hover:bg-white/90 text-primary transition-all;
+  }
+
 }
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    @apply bg-accent;
+  }
