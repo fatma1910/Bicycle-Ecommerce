@@ -12,8 +12,8 @@ const CartProvider = ({ children }: CartProviderProps) => {
       mode="payment"
       cartMode="client-only"
       stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLISHER_KEY||"" }
-      successUrl="http://localhost:3000/stripe/success"
-      cancelUrl="http://localhost:3000/stripe/error"
+      successUrl="https://bicycle-ecommerce-eta.vercel.app/stripe/success"
+      cancelUrl="https://bicycle-ecommerce-eta.vercel.app/stripe/error"
       language="en-US"
       currency="USD"
       billingAddressCollection={true}
