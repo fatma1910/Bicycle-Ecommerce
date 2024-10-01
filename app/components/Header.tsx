@@ -5,12 +5,12 @@ import Nav from "./Nav";
 import CartSideBar from "./CartSideBar";
 import { CgShoppingBag } from "react-icons/cg";
 import { useShoppingCart } from "use-shopping-cart";
-import { useState } from "react"; // Import useState for handling search input
+import { useState } from "react"; 
 import { LogIn } from "lucide-react";
 
 const Header = () => {
   const { cartCount, handleCartClick } = useShoppingCart();
-  const [searchQuery, setSearchQuery] = useState(''); // State for search query
+  const [searchQuery, setSearchQuery] = useState(''); 
 
   const handleSearch = (e:any) => {
     e.preventDefault(); 
