@@ -21,7 +21,7 @@ const rajdhani = Rajdhani({ subsets: ['latin'], weight:['300', "400" , "500", "6
 
 
 export const metadata: Metadata = {
-  title: "Bizezz",
+  title: "Bikezz",
   description: "let's make your journy",
 };
 

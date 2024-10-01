@@ -39,7 +39,7 @@ const Header = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="border border-gray-300 rounded-md md:px-4 md:w-72 xl:w-96 md:py-2 focus:outline-none px-1 py-1 text-left placeholder:text-left"
             />
-            <button type="submit" className="absolute right-0 bg-accent text-white md:px-4 md:py-2 px-1 py-2 rounded-md focus:outline-none">
+            <button type="submit" className="absolute right-0 bg-accent text-white md:px-4 md:py-2 px-1 py-1 rounded-md focus:outline-none">
               Search
             </button>
           </form>
