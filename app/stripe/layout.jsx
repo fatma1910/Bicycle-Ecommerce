@@ -3,10 +3,9 @@
 
 import React from 'react';
 
-const StripeLayout = () => {
+const StripeLayout = ({children}) => {
   return (
     <div>
-      {/* Any shared layout components */}
       {children}
     </div>
   );
