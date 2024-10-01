@@ -1,5 +1,6 @@
 
 export interface BikeProps {
+    id: Key | null | undefined;
     filter: any;
     _id: string;
     name: string;

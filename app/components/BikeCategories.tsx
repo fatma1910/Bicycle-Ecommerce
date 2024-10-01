@@ -38,10 +38,10 @@ const BikeCategories = ({bikes}:BikeProp_) => {
     }, [category,price,bikes])
 
   return (
-    <section className=" py-10">
+    <section className=" py-10 min-h-screen">
         <div className="container mx-auto">
-            <div className="flex flex-col ">
-                <aside className=" w-full p-4 mb-8 xl:w-[300px]  xl:fixed ">
+            <div className="flex flex-col xl:flex-row ">
+                <aside className=" w-full p-4 mb-8 xl:w-[300px]  ">
                     <RadioGroup defaultValue="all" className="flex flex-col gap-6 mb-12">
                         <div className="flex items-center space-x-2 ">
                             <RadioGroupItem  value="all" id="all" onClick={() => setCategory('all')} />

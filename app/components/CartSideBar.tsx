@@ -13,7 +13,7 @@ const CartSideBar = () => {
 
   return (
     <Sheet open={shouldDisplayCart} onOpenChange={handleCartClick}>
-      <SheetContent>
+      <SheetContent className="mb-6">
         <SheetHeader>
           <SheetTitle className="mb-12">My Shopping Cart ({itemCount})</SheetTitle>
         </SheetHeader>
@@ -23,7 +23,7 @@ const CartSideBar = () => {
               <h5 className="text-black/50">Your cart is empty</h5>
             </div>
           ) : (
-            <ScrollArea className="h-[70vh] xl:h-[74vh] pr-4 mb-4">
+            <ScrollArea className="h-[68vh] xl:h-[70vh] pr-4 mb-4">
               {cartDetails && Object.entries(cartDetails).map(([key, item]) => {
                 return <CartItem key={key} item={item} />;
               })}
@@ -31,7 +31,7 @@ const CartSideBar = () => {
           )}
         </>
         {itemCount > 0 && (
-          <div>
+          <div className="mb-4">
             <div className="flex justify-between font-semibold">
               <div className="uppercase mb-5">Total</div>
               <div className="text-lg">${totalPrice}</div>

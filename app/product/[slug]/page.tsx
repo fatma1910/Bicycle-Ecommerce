@@ -36,7 +36,7 @@ const ProductDetails = async ({params}:{params:Params}) => {
               <AddToCartBtn
               price_id={bike.price_id}
               name={bike.name}
-              // id={bike._id}
+              id={bike._id}
               currency="USD"
               description={bike.description}
               price={bike.price}

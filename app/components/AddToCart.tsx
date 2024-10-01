@@ -5,14 +5,14 @@ import React from 'react'
 import { useShoppingCart } from 'use-shopping-cart'
 import { useToast } from '@/hooks/use-toast';
 
-const AddToCartBtn = ({btnStyle , text , icon  ,currency, name , description , price , images, price_id }:AddToCartProps) => {
+const AddToCartBtn = ({btnStyle , text , icon  ,currency, name , description , price , images, price_id, id }:AddToCartProps) => {
 
   const {toast} = useToast();
 
   const {addItem} = useShoppingCart();
 
   const bike = {
-    // id : id ,
+    id : id ,
     currency : currency ,
     name : name ,
     description : description ,
