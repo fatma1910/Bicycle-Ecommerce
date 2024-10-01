@@ -7,10 +7,12 @@ import { CgShoppingBag } from "react-icons/cg";
 import { useShoppingCart } from "use-shopping-cart";
 import { useState } from "react"; 
 import { LogIn } from "lucide-react";
+import { UserButton, useUser } from "@clerk/nextjs";
 
 const Header = () => {
   const { cartCount, handleCartClick } = useShoppingCart();
   const [searchQuery, setSearchQuery] = useState(''); 
+  const { user } = useUser();
 
   const handleSearch = (e:any) => {
     e.preventDefault(); 
@@ -46,12 +48,22 @@ const Header = () => {
         <div className="flex items-center gap-[18px] ">
         
         <Nav containerStyes={"gap-[36px] hidden  md:flex"} />
-          
-          <Link
+          {user? (
+            <>
+            <UserButton />
+            </>
+           ):(
+            <>
+            <Link
             href="/sign-in"
           >
            <LogIn  className="cursor-pointer" />
           </Link>
+          </>
+          )
+           
+          }
+
           <div onClick={() => handleCartClick()} className="relative cursor-pointer">
             <CgShoppingBag className="text-[26px] " />
             <div className="bg-accent flex justify-center items-center rounded-full w-[18px] h-[18px] absolute -bottom-1 -right-1 text-white text-sm font-medium">

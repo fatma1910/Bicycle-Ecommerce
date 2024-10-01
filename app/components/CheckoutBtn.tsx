@@ -1,22 +1,18 @@
-
-
 import { useUser } from "@clerk/nextjs";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 import { useShoppingCart } from "use-shopping-cart"
 
 const CheckoutBtn = () => {
 
   const { user } = useUser();
   const router = useRouter();
-
   const handleCheckout = async () => {
-    if (!user) {
-      
 
+
+    if (!user) {
 			router.push('/sign-in')
-      
-		}else {
-    try {
+		} else {
+       try {
       const res = await redirectToCheckout();
       if(res?.error) {
         console.log(res);
@@ -25,12 +21,11 @@ const CheckoutBtn = () => {
     } catch (error){
       console.log(error);
     }
-  }
+    }
+   
     
   }
-  const {redirectToCheckout , handleCartClick} = useShoppingCart();
-
-  
+  const {redirectToCheckout} = useShoppingCart();
 
   return (
     <button className="btn btn-primary w-full "
