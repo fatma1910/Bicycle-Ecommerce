@@ -1,14 +1,16 @@
 'use client'
 
+import { useEffect } from 'react';
 import Link from 'next/link';
 import { useShoppingCart } from 'use-shopping-cart';
 
 const SuccessPage = () => {
   const { clearCart } = useShoppingCart();
 
-  const handleClearCart = () => {
+  // Clear the cart when the component loads
+  useEffect(() => {
     clearCart();
-  };
+  }, [clearCart]);
 
   return (
     <section className='py-72'>
@@ -17,7 +19,7 @@ const SuccessPage = () => {
           Your payment was successful! Thank you.
         </h3>
         <Link href='/'>
-          <button className='btn btn-primary mx-auto' onClick={handleClearCart}>
+          <button className='btn btn-primary mx-auto'>
             Back to the home page
           </button>
         </Link>
