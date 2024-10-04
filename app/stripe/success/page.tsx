@@ -7,10 +7,9 @@ import { useShoppingCart } from 'use-shopping-cart';
 const SuccessPage = () => {
   const { clearCart } = useShoppingCart();
 
-  // Clear the cart when the component loads
   useEffect(() => {
     clearCart();
-  }, [clearCart]);
+  }, []);
 
   return (
     <section className='py-72'>
