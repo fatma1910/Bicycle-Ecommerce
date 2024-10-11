@@ -95,7 +95,7 @@ const BikeCategories = ({ bikes }: BikeProp_) => {
             </aside>
 
             
-            <div className="w-full xl:w-[1050px]">
+            <div className="w-full ">
                 {filterBikes.length === 0 ? (
                 <p>No items match your filter.</p>
                 ) : (
