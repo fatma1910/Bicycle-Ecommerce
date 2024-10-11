@@ -58,7 +58,7 @@ const BikeCategories = ({ bikes }: BikeProp_) => {
                     <RadioGroupItem
                     value="professional"
                     id="professional"
-                    onClick={() => setCategory("professional")}
+                    onClick={() => setCategory("professional ")}
                     />
                     <label htmlFor="professional">Professional</label>
                 </div>
