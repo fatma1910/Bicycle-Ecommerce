@@ -31,9 +31,9 @@ const BikeCategories = ({ bikes }: BikeProp_) => {
 
     return (
         <section className="py-10 min-h-screen">
-        <div className="container mx-auto">
-            <div className="flex flex-col xl:flex-row">
-            <aside className="w-full p-4 mb-8 xl:w-[300px] fixed xl:sticky xl:top-28 h-full">
+        <div className=" mx-8">
+            <div className="flex flex-col md:flex-row">
+            <aside className="w-full p-4 md:pl-1 mb-8 md:w-[300px]  md:sticky md:top-28 md:h-full ">
                 <RadioGroup
                 defaultValue="all"
                 className="flex flex-col gap-6 mb-12"
