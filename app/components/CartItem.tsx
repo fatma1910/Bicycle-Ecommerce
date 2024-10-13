@@ -12,7 +12,7 @@ const CartItem = ({item}:any) => {
 
 
         <div>
-            <Image src={urlFor(item.images[0]).url()} quality={80} width={100} height={100} alt="" 
+            <Image src={urlFor(item.images[0]).url()} width={100} height={100} alt=""
             className="object-contain"
             />
         </div>
