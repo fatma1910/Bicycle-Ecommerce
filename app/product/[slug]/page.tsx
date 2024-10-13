@@ -17,7 +17,7 @@ const ProductDetails = async ({params}:{params:Params}) => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-14">
           <div className="xl:flex-1 h-[460px] bg-primary/5 xl:w-[700px] xl:h-[540px] flex justify-center items-center">
-            <Image src={urlFor(bike.images[0]).url()} width={473} height={290} alt='' priority/>
+            <Image src={urlFor(bike.images[0]).url()} width={473} height={290}  alt=''   loading="lazy"/>
           </div>
 
           <div className=" flex-1 flex-col flex justify-center items-start  gap-10 pl-6">

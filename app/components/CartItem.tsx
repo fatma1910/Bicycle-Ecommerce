@@ -4,6 +4,7 @@ import { useShoppingCart } from "use-shopping-cart";
 import {FaPlus,FaMinus,FaX } from 'react-icons/fa6'
 
 const CartItem = ({item}:any) => {
+    
 
     const { removeItem , incrementItem , decrementItem } = useShoppingCart()
 
@@ -12,7 +13,7 @@ const CartItem = ({item}:any) => {
 
 
         <div>
-            <Image src={urlFor(item.images[0]).url()} width={100} height={100} alt=""
+            <Image src={urlFor(item.images[0]).url()}  width={100} height={100} alt=""   loading="lazy"
             className="object-contain"
             />
         </div>
