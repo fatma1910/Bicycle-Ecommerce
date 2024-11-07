@@ -55,7 +55,7 @@ const BikeCategories = ({ bikes }: BikeProp_) => {
                                 <label htmlFor="extreme">Extreme</label>
                             </div>
                             <div className="flex items-center space-x-2">
-                                <RadioGroupItem value="professional" id="professional" onClick={() => handleCategoryChange("professional")} />
+                                <RadioGroupItem value="professional" id="professional" onClick={() => handleCategoryChange("professional ")} />
                                 <label htmlFor="professional">Professional</label>
                             </div>
                             <div className="flex items-center space-x-2">
